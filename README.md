@@ -31,7 +31,7 @@ If you prefer to set up manually:
 
 1. **Install Python dependencies:**
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 2. **Set up Firework AI API key (Optional but Recommended):**
@@ -46,7 +46,7 @@ If you prefer to set up manually:
 
 3. **Run the game:**
    ```bash
-   python blackjack.py
+   python3 blackjack.py
    ```
 
 ## How to Play
