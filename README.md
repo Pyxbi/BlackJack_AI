@@ -25,57 +25,28 @@ A modern web-based Blackjack game where you play against an AI dealer. Built wit
 
 1. **Clone or download the project files**
 
-2. **Run the setup script:**
-   ```bash
-   python setup.py
-   ```
-   
-   This will:
-   - Check Python version compatibility
-   - Install all required dependencies
-   - Help you set up Gemini AI (optional)
-   - Test the installation
-
-3. **Start the game:**
-   ```bash
-   python blackjack.py
-   ```
-
-4. **Open your browser and go to:**
-   ```
-   http://localhost:5100
-   ```
-
 ### Manual Setup
 
 If you prefer to set up manually:
 
 1. **Install Python dependencies:**
    ```bash
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
-2. **Set up Gemini AI (Optional but Recommended):**
+2. **Set up Firework AI API key (Optional but Recommended):**
    
-   The game uses Google's Gemini AI to make the dealer think like a human player. To enable this:
+   The game uses dobby-unhinged-llama-3-3-70b-new's AI to make the dealer think like a human player. To enable this:
    
-   a. Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   
-   b. Set the API key in one of these ways:
-   - **Option 1**: Set as environment variable:
+    Set the API key in one of these ways:
+   - **Option 1**: Set as environment variable in .env:
      ```bash
-     export GEMINI_API_KEY='your_api_key_here'
+     FIREWORK_API_KEY="your_api_key"
      ```
-   - **Option 2**: Add to `config.py`:
-     ```python
-     GEMINI_API_KEY = 'your_api_key_here'
-     ```
-   
-   c. The game will work without the API key, but the dealer will use basic strategy instead of intelligent AI.
 
 3. **Run the game:**
    ```bash
-   python blackjack.py
+   python3 blackjack.py
    ```
 
 ## How to Play
@@ -89,36 +60,15 @@ If you prefer to set up manually:
 5. **Results**: See who wins and your updated balance
 6. **New Game**: Click "New Game" to play again
 
-## Project Structure
-
-```
-pythonProject/
-├── blackjack.py          # Main Flask application
-├── requirements.txt      # Python dependencies
-├── README.md            # This file
-├── templates/
-│   └── index.html       # Main game interface
-└── static/
-    ├── css/
-    │   └── style.css    # Game styling
-    └── js/
-        └── game.js      # Game logic and interactions
-```
-
 ## AI Dealer
 
-The AI dealer uses **Gemini AI** for intelligent decision-making that thinks like a human player:
+The AI dealer uses ** AI** for intelligent decision-making that thinks like a human player:
 
-### With Gemini AI (Recommended):
+### With  AI (Recommended):
 - **Human-like thinking**: Considers psychological factors and player behavior
 - **Advanced strategy**: Analyzes risk, probability, and game context
 - **Realistic gameplay**: Includes thinking time and detailed analysis
 - **Adaptive behavior**: Responds to player's hand strength and betting patterns
-
-### Without Gemini AI (Fallback):
-- **Basic strategy**: Follows standard casino rules
-- **Risk assessment**: Considers hand values and probabilities
-- **Consistent behavior**: Predictable but fair gameplay
 
 ### AI Features:
 - **Thinking time**: Simulates realistic dealer decision-making
@@ -158,5 +108,4 @@ This project is open source and available under the MIT License.
 ---
 
 **Enjoy playing Blackjack! 🃏** # BlackJack_AI
-# BlackJack_AI
 # BlackJack_AI
