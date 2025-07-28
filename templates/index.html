@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack - Player vs AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cosmic-bg"></div>
+    <div class="blackjack-game">
+        <!-- Dealer (AI Girl) Section -->
+        <div class="dealer-area">
+            <div class="dealer-avatar-glow">
+                <img src="{{ url_for('static', filename='img/sentient.png') }}" alt="AI Dealer" class="dealer-avatar">
+            </div>
+            <div class="dealer-cards-wrapper">
+                <div class="dealer-cards diagonal-cards" id="dealer-cards">
+                    <!-- Dealer cards will be rendered here -->
+                </div>
+                <div class="dealer-value hidden card-total" id="dealer-value"></div>
+            </div>
+        </div>
+
+        <!-- Status and Result Messages (centered between dealer and player) -->
+        <div class="center-status">
+            <div class="status-message" id="status-message">Welcome to Blackjack! Click "Deal" to start.</div>
+            <div class="result-message" id="result-message"></div>
+            <button id="deal-btn" class="btn btn-primary center-deal-btn">Deal</button>
+        </div>
+
+        <!-- Player Area (bottom) -->
+        <div class="player-area">
+            <div class="player-hands">
+                <div class="player-cards-wrapper">
+                    <div class="player-cards diagonal-cards" id="player-cards">
+                        <!-- Player cards will be rendered here -->
+                    </div>
+                    <div class="player-value hidden card-total" id="player-value"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wallet, Bet Info, and New Game (bottom center) -->
+        <div class="wallet-bet-bar">
+            <span class="wallet">WALLET <span id="balance">$1000</span></span>
+            <span class="bet">Your BET<span id="bet"></span>
+                <input type="number" id="bet-input" class="bet-input-inline" min="1" placeholder="Bet" />
+            </span>
+            <button id="new-game-btn" class="btn btn-secondary" style="display: none;">New Game</button>
+        </div>
+
+        <!-- Game Controls (centered, neon) -->
+        <div class="center-controls">
+            <button id="hit-btn" class="btn neon-btn">Hit</button>
+            <button id="stand-btn" class="btn neon-btn neon-pink-btn">Stay</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html> 
