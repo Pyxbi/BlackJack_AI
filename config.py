@@ -10,7 +10,7 @@ FIREWORKS_API_KEY = os.getenv('FIREWORKS_API_KEY')
 # Game Configuration
 DEFAULT_BALANCE = 1000
 DEFAULT_BET = 100
-GAME_PORT = 5100
+GAME_PORT = 10000
 
 # AI Configuration
 AI_THINKING_TIME = 1.5  # seconds to simulate AI thinking
